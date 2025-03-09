@@ -36,3 +36,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 alias g="git"
+alias h="hx"
