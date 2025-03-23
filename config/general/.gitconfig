@@ -6,7 +6,7 @@
 [pull]
 	rebase = true  
 [core]
-	excludesfile = /Users/alicia/.config/.gitignore_global
+	excludesfile = /Users/kevindaniel/.config/git/.gitignore_global
 	symlinks = true
 
 [alias]
