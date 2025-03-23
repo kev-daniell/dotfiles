@@ -181,7 +181,7 @@ function setup_dot_files () {
   # If git clone / pull failed, then exit with error
   if ! test "$?" -eq 0; then
     echo -e >&2 "${RED_B}Failed to fetch dotfiles from git${RESET}"
-    terminate
+    # terminate
   fi
 
   # Set up symlinks with dotbot
@@ -193,7 +193,98 @@ function setup_dot_files () {
   "${DOTFILES_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${DOTFILES_DIR}" -c "${SYMLINK_FILE}" "${@}"
 }
 
+# Setup Brew, install / update packages, organize launchpad and checks for macOS updates
+function intall_macos_packages () {
+  # Homebrew not installed, ask user if they'd like to download it now
+  if ! command_exists brew; then
+    echo -e "\n${CYAN_B}Would you like to install Homebrew? (y/N)${RESET}"
+    read -t $PROMPT_TIMEOUT -n 1 -r ans_homebrewins
+    if [[ $ans_homebrewins =~ ^[Yy]$ ]] || [[ $AUTO_YES = true ]] ; then
+      echo -en "🍺 ${PURPLE}Installing Homebrew...${RESET}\n"
+      brew_url='https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh'
+      /bin/bash -c "$(curl -fsSL $brew_url)"
+      export PATH=/opt/homebrew/bin:$PATH
+    fi
+  fi
+  # Update / Install the Homebrew packages in ~/.Brewfile
+  if command_exists brew && [ -f "$DOTFILES_DIR/scripts/Brewfile" ]; then
+    echo -e "\n${PURPLE}Updating homebrew and packages...${RESET}"
+    brew update # Update Brew to latest version
+    brew upgrade # Upgrade all installed casks
+    brew bundle --global --file $HOME/.Brewfile # Install all listed Brew apps
+    brew cleanup # Remove stale lock files and outdated downloads
+    killall Finder # Restart finder (required for some apps)
+  else
+    echo -e "${PURPLE}Skipping Homebrew as requirements not met${RESET}"
+  fi
+
+  # Check for MacOS software updates, and ask user if they'd like to install
+  echo -e "\n${CYAN_B}Would you like to check for OX X system updates? (y/N)${RESET}"
+  read -t $PROMPT_TIMEOUT -n 1 -r ans_macoscheck
+  if [[ $ans_macoscheck =~ ^[Yy]$ ]] || [[ $AUTO_YES = true ]] ; then
+    echo -e "${PURPLE}Checking for software updates...${RESET}"
+    pending_updates=$(softwareupdate -l 2>&1)
+    if [[ ! $pending_updates == *"No new software available."* ]]; then
+      echo -e "${PURPLE}A new version of Mac OS is availbile${RESET}"
+      echo -e "${CYAN_B}Would you like to update to the latest version of MacOS? (y/N)${RESET}"
+      read -t $PROMPT_TIMEOUT -n 1 -r ans_macosupdate
+      if [[ $ans_macosupdate =~ ^[Yy]$ ]] || [[ $AUTO_YES = true ]]; then
+        echo -e "${PURPLE}Updating MacOS${RESET}"
+        softwareupdate -i -a
+      fi
+    else
+      echo -e "${GREEN}System is up-to-date."\
+      "Running $(sw_vers -productName) version $(sw_vers -productVersion)${RESET}"
+    fi
+  fi
+}
+
+
+# Updates current session, and outputs summary
+function finishing_up () {
+  # Update source to ZSH entry point
+  source "${HOME}/.zshenv"
+
+  # Calculate time taken
+  total_time=$((`date +%s`-START_TIME))
+  if [[ $total_time -gt 60 ]]; then
+    total_time="$(($total_time/60)) minutes"
+  else
+    total_time="${total_time} seconds"
+  fi
+
+  # Print success msg and pretty picture
+  make_banner "✨ Dotfiles configured succesfully in $total_time" ${GREEN_B} 2
+  echo -e "\033[0;92m     .--.\n    |o_o |\n    |:_/ |\n   // \
+  \ \\ \n  (|     | ) \n /'\_   _/\`\\ \n \\___)=(___/\n"
+
+  # Refresh ZSH sesssion
+  SKIP_WELCOME=true || exec zsh
+
+  # Show popup
+  if command_exists terminal-notifier; then
+    terminal-notifier -group 'dotfiles' -title $TITLE  -subtitle 'All Tasks Complete' \
+    -message "Your dotfiles are now configured and ready to use 🥳" \
+    -appIcon ./.github/logo.png -contentImage ./.github/logo.png \
+    -remove 'ALL' -sound 'Sosumi' &> /dev/null
+  fi
+
+  # Show press any key to exit
+  echo -e "${CYAN_B}Press any key to exit.${RESET}\n"
+  read -t $PROMPT_TIMEOUT -n 1 -s
+
+  # Bye
+  exit 0
+}
+
+# If --help flag passed in, just show the help menu
+if [[ $PARAMS == *"--help"* ]]; then
+  make_intro
+  exit 0
+fi
 
 # install engine
 pre_setup_tasks
 setup_dot_files
+intall_macos_packages 
+finishing_up 

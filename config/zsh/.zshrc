@@ -1,3 +1,7 @@
+# Directory for all-things ZSH config
+zsh_dir=${${ZDOTDIR}:-$HOME/.config/zsh}
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -7,8 +11,8 @@ fi
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Import P10k config for command prompt
+[[ ! -f ${zsh_dir}/.p10k.zsh ]] || source ${zsh_dir}/.p10k.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kevindaniel/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kevindaniel/Downloads/google-cloud-sdk/path.zsh.inc'; fi

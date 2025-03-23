@@ -1,0 +1,35 @@
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+
+# - clean: ['~', '${XDG_CONFIG_HOME}']
+
+
+- shell:
+  - description: Set XDG environmental variables
+    command: source ./config/zsh/.zshenv
+
+# Symlink locations for files / directories
+- link:
+
+    # Essential configs (ZSH, Vim)
+    ~/.zshenv: { path: config/zsh/.zshenv, force: true }
+    ${XDG_CONFIG_HOME}/zsh: config/zsh
+
+    # Utility config files
+    ${XDG_CONFIG_HOME}/git/.gitconfig: config/.gitconfig
+    ${XDG_CONFIG_HOME}/.gitignore_global: config/.gitignore_global
+
+    # MacOS-Only
+    ~/.Brewfile:
+      if: '[ `uname` = Darwin ]'
+      path: scripts/Brewfile
+
+# If not already present, create home directories
+- create:
+    - ~/Downloads
+    - ~/Documents
+    - ~/Applications
