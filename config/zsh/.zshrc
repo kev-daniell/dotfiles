@@ -1,24 +1,10 @@
 # Directory for all-things ZSH config
-zsh_dir=${${ZDOTDIR}:-$HOME/.config/zsh}
-
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+zsh_dir=${ZDOTDIR:-$HOME/.config/zsh}
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Import P10k config for command prompt
 [[ ! -f ${zsh_dir}/.p10k.zsh ]] || source ${zsh_dir}/.p10k.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kevindaniel/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kevindaniel/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kevindaniel/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kevindaniel/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -20,8 +20,8 @@
     ${XDG_CONFIG_HOME}/zsh: config/zsh
 
     # Utility config files
-    ${XDG_CONFIG_HOME}/git/.gitconfig: config/.gitconfig
-    ${XDG_CONFIG_HOME}/.gitignore_global: config/.gitignore_global
+    ${XDG_CONFIG_HOME}/git/.gitconfig: config/general/.gitconfig
+    ${XDG_CONFIG_HOME}/.gitignore_global: config/general/.gitignore_global
 
     # MacOS-Only
     ~/.Brewfile:
