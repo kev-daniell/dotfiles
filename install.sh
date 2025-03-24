@@ -243,7 +243,7 @@ function intall_macos_packages () {
 # Updates current session, and outputs summary
 function finishing_up () {
   # Update source to ZSH entry point
-  source "${HOME}/.zshenv"
+  source "${HOME}/.config/zsh/.zshenv"
 
   # Calculate time taken
   total_time=$((`date +%s`-START_TIME))

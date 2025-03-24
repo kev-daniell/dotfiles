@@ -10,6 +10,3 @@ export XDG_LIB_HOME="${HOME}/.local/lib"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export GIT_CONFIG_GLOBAL="${XDG_CONFIG_HOME}/git/.gitconfig"
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
-
-
-source $XDG_CONFIG_HOME/zsh/.zshrc
