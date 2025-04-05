@@ -56,13 +56,20 @@
     packages = with pkgs; [
       vim
       gnupg
+
+      # Node 
       nodejs
       nodePackages.npm # globally install npm
+      yarn
       nodePackages.prettier
       nodePackages.nodemon
+      nodePackages.typescript-language-server
 
-      # TODO: add rust
-      
+      # Rust
+      rustc
+      cargo
+      rustfmt
+
       python3
       go
     ];
