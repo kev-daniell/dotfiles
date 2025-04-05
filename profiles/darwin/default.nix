@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   ...
 }: 
 
@@ -80,8 +79,6 @@
       enable = true;
       userName = "Kevin Daniel"; # %CONFIG%
       userEmail = "kevindkevdan@gmail.com"; # %CONFIG%
-
-      # TODO add reference to global .gitignore file here
 
       extraConfig = {
         init.defaultBranch = "main";
