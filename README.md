@@ -31,11 +31,8 @@
    cd dotfiles
    ```
 
-2. Configure `flake.nix` to use your username:
-   TODO: Expand
-
-3. Build and activate the Nix environment:
+2. Build and activate the Nix environment:
 
    ```sh
-   darwin-rebuild --flake . switch
+   make switch
    ```
