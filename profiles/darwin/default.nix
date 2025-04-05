@@ -77,8 +77,8 @@
 
     git = {
       enable = true;
-      userName = "Kevin Daniel"; # %CONFIG%
-      userEmail = "kevindkevdan@gmail.com"; # %CONFIG%
+      userName = "%GIT_NAME";
+      userEmail = "%GIT_EMAIL";
 
       extraConfig = {
         init.defaultBranch = "main";

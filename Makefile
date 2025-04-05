@@ -1,7 +1,6 @@
-build:
+switch:
+	scripts/setup.sh
 	darwin-rebuild --flake . switch
-
-.PHONY: test
 
 test:
 	nix flake check --all-systems

@@ -24,8 +24,9 @@
     nixpkgs,
     ...
   }: let
+    hostname = "%HOSTNAME%";
     user = rec {
-      username = "kevindaniel"; # %CONFIG%
+      username = "%USERNAME%";
       homeDirectory = "/Users/${username}";
     };
     forEachSystem = nixpkgs.lib.genAttrs [
@@ -44,30 +45,28 @@
         };
       };
   in {
-    darwinConfigurations = {
-      "Kevins-MacBook-Air" = nix-darwin.lib.darwinSystem { # %CONFIG%
-        system = "aarch64-darwin";
-        modules = [
-          ./hosts/darwin/configuration.nix
-          home-manager.darwinModules.home-manager
-          {
-            users.users.${user.username} = {
-              home = user.homeDirectory;
-              name = user.username;
-            };
-            home-manager = {
-              extraSpecialArgs = { inherit user; };
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.${user.username}.imports = [
-                ./profiles/darwin       # Ensure this path exists
-              ];
-            };
-          }
-        ];
-      };
+    darwinConfigurations."${hostname}" =  nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      modules = [
+        ./hosts/darwin/configuration.nix
+        home-manager.darwinModules.home-manager
+        {
+          users.users.${user.username} = {
+            home = user.homeDirectory;
+            name = user.username;
+          };
+          home-manager = {
+            extraSpecialArgs = { inherit user; };
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.${user.username}.imports = [
+              ./profiles/darwin       # Ensure this path exists
+            ];
+          };
+        }
+      ];
     };
-
+   
     checks = forEachSystem (system: {
       system = pre-commit-hooks system;
     });
