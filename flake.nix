@@ -49,6 +49,7 @@
       system = "aarch64-darwin";
       modules = [
         ./hosts/darwin/configuration.nix
+        ./hosts/shared/configuration.nix
         home-manager.darwinModules.home-manager
         {
           users.users.${user.username} = {
@@ -61,6 +62,7 @@
             useUserPackages = true;
             users.${user.username}.imports = [
               ./profiles/darwin       # Ensure this path exists
+              ./profiles/shared
             ];
           };
         }
