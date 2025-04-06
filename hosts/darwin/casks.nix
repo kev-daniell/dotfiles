@@ -4,18 +4,18 @@ _:
   # Development Tools
   "visual-studio-code"
   "postman"
+  "iterm2"
 
   # Communication Tools
   "discord"
-  "notion"
   "slack"
   "telegram"
   "zoom"
   "microsoft-outlook"
+  "microsoft-word"
 
   # Entertainment Tools
   "spotify"
-  "roblox"
 
 
   # Browsers
