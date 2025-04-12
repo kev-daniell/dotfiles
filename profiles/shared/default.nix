@@ -15,6 +15,7 @@
     packages = with pkgs; [
       vim
       gnupg
+      tmux
 
       # Node 
       nodejs
