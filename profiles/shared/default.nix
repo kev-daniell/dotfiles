@@ -20,6 +20,7 @@
       # Node 
       nodejs
       nodePackages.npm # globally install npm
+      pnpm
       yarn
       nodePackages.prettier
       nodePackages.nodemon
