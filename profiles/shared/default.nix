@@ -16,6 +16,7 @@
       vim
       gnupg
       tmux
+      fzf
 
       # Node 
       nodejs
@@ -44,8 +45,8 @@
 
     git = {
       enable = true;
-      userName = "%GIT_NAME%";
-      userEmail = "%GIT_EMAIL%";
+      userName = "Kevin Daniel";
+      userEmail = "kevindkevdan@gmail.com";
 
       extraConfig = {
         init.defaultBranch = "main";
