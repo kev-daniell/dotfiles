@@ -10,6 +10,14 @@
       DIRENV_LOG_FORMAT = "";
     };
 
+    file = {
+      ".gitignore_global" = {
+        source = builtins.path {
+          path = ../shared/config/.gitignore_global;
+        };
+      };
+    };
+
     stateVersion = "22.05";
 
     packages = with pkgs; [

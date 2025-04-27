@@ -14,11 +14,6 @@
           [[ ! -f ./.p10k.zsh ]] || source ./.p10k.zsh
         '';
       };
-      ".gitignore_global" = {
-        source = builtins.path {
-          path = ../shared/config/.gitignore_global;
-        };
-      };
       ".p10k.zsh" = {
         source = builtins.path {
           path = ./config/.p10k.zsh;
