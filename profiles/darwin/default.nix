@@ -12,6 +12,8 @@
           eval "$(/opt/homebrew/bin/brew shellenv)"
           source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
           [[ ! -f ./.p10k.zsh ]] || source ./.p10k.zsh
+
+          tmux source-file ~/.config/tmux/tmux.conf
         '';
       };
       ".p10k.zsh" = {

@@ -51,6 +51,32 @@
       nix-direnv.enable = true;
     };
 
+    tmux = {
+      enable = true;
+      terminal = "tmux-256color";
+
+      plugins = with pkgs.tmuxPlugins; [
+      better-mouse-mode
+      yank
+
+      catppuccin
+    ];
+      # Replaces ~/.config/tmux/tmux.conf
+      extraConfig = ''
+        bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded."
+
+        setw -g mouse on
+
+        # vim motions
+        bind h select-pane -L
+        bind j select-pane -D
+        bind k select-pane -U
+        bind l select-pane -R
+
+        set -g @catppuccin_flavour 'mocha'
+      '';
+  };
+
     git = {
       enable = true;
       userName = "Kevin Daniel";
