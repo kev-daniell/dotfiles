@@ -5,6 +5,7 @@ _:
   "visual-studio-code"
   "postman"
   "iterm2"
+  "cursor"
 
   # Communication Tools
   "discord"
@@ -22,4 +23,7 @@ _:
   # Browsers
   "google-chrome"
   "firefox"
+
+  # Misc
+  "1password"
 ]
