@@ -24,7 +24,7 @@ _:
   "google-chrome"
   "firefox"
 
-  # Misc
+  # Sec. Tools
   "1password"
   "tailscale"
 ]
