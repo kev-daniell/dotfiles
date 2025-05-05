@@ -26,4 +26,5 @@ _:
 
   # Misc
   "1password"
+  "tailscale"
 ]

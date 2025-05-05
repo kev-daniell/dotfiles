@@ -31,6 +31,7 @@
       nodePackages.npm # globally install npm
       pnpm
       yarn
+      bun
       nodePackages.prettier
       nodePackages.nodemon
       nodePackages.typescript-language-server
@@ -42,6 +43,8 @@
 
       python3
       go
+      nats-server
+      foundry
     ];
   };
 
