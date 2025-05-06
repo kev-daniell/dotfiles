@@ -40,6 +40,7 @@
       rustc
       cargo
       rustfmt
+      clippy
 
       python3
       go
