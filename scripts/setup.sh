@@ -11,11 +11,15 @@ export GIT_NAME
 read -rp "Enter your email for git: " GIT_EMAIL
 export GIT_EMAIL
 
+read -rp "Enter your GPG key ID: " GPG_KEY_ID
+export GPG_KEY_ID
+
 echo -e "\n✅ Environment variables set:"
 echo "HOSTNAME=$HOSTNAME"
 echo "USERNAME=$USERNAME"
 echo "GIT_NAME=$GIT_NAME"
 echo "GIT_EMAIL=$GIT_EMAIL"
+echo "GPG_KEY_ID=$GPG_KEY_ID"
 
 # Function to recursively replace %VAR% in files under current directory
 echo -e "\n🔧 Replacing variables in files under $(pwd)..."
@@ -27,6 +31,7 @@ for file in $(find . -type f); do
     sed -i '' "s|%USERNAME%|$USERNAME|g" "$file"
     sed -i '' "s|%GIT_NAME%|$GIT_NAME|g" "$file"
     sed -i '' "s|%GIT_EMAIL%|$GIT_EMAIL|g" "$file"
+    sed -i '' "s|%GPG_KEY_ID%|$GPG_KEY_ID|g" "$file"
   fi
 done
 

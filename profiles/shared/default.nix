@@ -83,17 +83,22 @@
 
     git = {
       enable = true;
-      userName = "Kevin Daniel";
-      userEmail = "kevindkevdan@gmail.com";
+      userName = "%GIT_NAME%";
+      userEmail = "%GIT_EMAIL%";
 
       extraConfig = {
         init.defaultBranch = "main";
+        
         core = {
           editor = "vim";
           excludesFile = "~/.gitignore_global";
         };
+
         pull.rebase = true;
         rebase.autoStash = true;
+        user.signingkey = "%GPG_KEY_ID%";
+        commit.gpgSign = true;
+
         alias = {
           gone = "!f() { git fetch --all --prune; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D; }; f";
           a = "add";
