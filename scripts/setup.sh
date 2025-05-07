@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Prompt and export environment variables
-export HOSTNAME=$(hostname)
+export HOSTNAME=$(hostname -s)
 
 export USERNAME=$(whoami)
 

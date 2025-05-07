@@ -5,11 +5,6 @@
 
   homebrew = {
       enable = true; 
-
-      brews = [
-        "helix"
-      ];
-      
       casks = pkgs.callPackage ./casks.nix {};
     };
 

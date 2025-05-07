@@ -22,6 +22,7 @@
 
     packages = with pkgs; [
       vim
+      helix
       gnupg
       tmux
       fzf
@@ -79,7 +80,28 @@
 
         set -g @catppuccin_flavour 'mocha'
       '';
-  };
+    };
+
+    helix = {
+      enable = true;
+
+      settings = {
+        theme = "dark_plus";
+        editor.line-number = "relative";
+        keys.normal = {
+          C-h = "jump_view_left";
+          C-j = "jump_view_down";
+          C-k = "jump_view_up";
+          C-l = "jump_view_right";
+          space = {
+            l = ":reload";
+            L = ":reload-all";
+            o = ":reflow";
+            T = ":tree-sitter-subtree";
+          };
+        };
+      };
+    };
 
     git = {
       enable = true;
