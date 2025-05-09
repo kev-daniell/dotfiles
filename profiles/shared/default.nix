@@ -45,8 +45,11 @@
 
       python3
       go
+      ltex-ls
+      pyright
       nats-server
       foundry
+      helix
     ];
   };
 
@@ -85,6 +88,41 @@
     helix = {
       enable = true;
 
+      languages.language = [
+        {
+          name = "markdown";
+          language-servers = [
+            {
+              name = "ltex-ls";
+            }
+          ];
+        }
+        {
+          name = "python";
+          language-servers = [
+            {
+              name = "pyright";
+            }
+          ];
+        }
+        {
+          name = "typescript";
+          language-servers = [
+            {
+              name = "typescript-language-server";
+            }
+          ];
+        }
+        {
+          name = "javascript";
+          language-servers = [
+            {
+              name = "typescript-language-server";
+            }
+          ];
+        }
+      ];
+
       settings = {
         theme = "dark_plus";
         editor.line-number = "relative";
@@ -94,8 +132,8 @@
           C-k = "jump_view_up";
           C-l = "jump_view_right";
           space = {
-            l = ":reload";
-            L = ":reload-all";
+            l = ":reload-all";
+            u = ":reset-diff-change";
             o = ":reflow";
             T = ":tree-sitter-subtree";
           };
