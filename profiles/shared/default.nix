@@ -42,6 +42,7 @@
       cargo
       rustfmt
       clippy
+      rust-analyzer
 
       python3
       go
@@ -118,6 +119,14 @@
           language-servers = [
             {
               name = "typescript-language-server";
+            }
+          ];
+        }
+        {
+          name = "rust";
+          language-servers = [
+            {
+              name = "rust-analyzer";
             }
           ];
         }
