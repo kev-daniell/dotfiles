@@ -82,10 +82,18 @@
         bind k select-pane -U
         bind l select-pane -R
 
+        bind -r J resize-pane -D 5  # Shrink vertically
+        bind -r K resize-pane -U 5  # Expand vertically
+        bind -r H resize-pane -L 5  # Shrink horizontally
+        bind -r L resize-pane -R 5  # Expand horizontally
+
         # CATPPUCCIN CONFIG:
-        set -g @plugin 'tmux-plugins/tpm'
-        set -g @plugin 'tmux-plugins/tmux-online-status'
-        set -g @plugin 'tmux-plugins/tmux-battery'
+        set -g @tpm_plugins '
+            tmux-plugins/tpm \
+            tmux-plugins/tmux-online-status \
+            tmux-plugins/tmux-battery \
+        '
+
         
         # Configure Catppuccin
         set -g @catppuccin_flavor "macchiato"
@@ -143,6 +151,14 @@
         
         set -g window-status-current-format " #I#{?#{!=:#{window_name},Window},: #W,} "
         set -g window-status-current-style "bg=#{@thm_peach},fg=#{@thm_bg},bold"
+
+        # bootstrap tpm
+        if "test ! -d ~/.tmux/plugins/tpm" \
+          "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
+
+
+        # Initialize TPM (this should be at the bottom of the file)
+        run '~/.tmux/plugins/tpm/tpm'
       '';
     };
 
