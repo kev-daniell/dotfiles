@@ -37,6 +37,7 @@
       shellAliases = {
         g = "git";
         h = "hx";
+        f = "fzf";
       };
     };
 
