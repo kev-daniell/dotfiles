@@ -240,7 +240,7 @@
         init.defaultBranch = "main";
         
         core = {
-          editor = "vim";
+          editor = "hx";
           excludesFile = "~/.gitignore_global";
         };
 
