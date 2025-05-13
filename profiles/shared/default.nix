@@ -91,6 +91,8 @@
         # set base to 1 for windows and panes
         set -g base-index 1
         setw -g pane-base-index 1
+
+        setw -g mode-keys vi
         
         # CATPPUCCIN CONFIG:
         set -g @tpm_plugins '
