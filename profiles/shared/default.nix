@@ -87,6 +87,8 @@
         bind -r H resize-pane -L 5  # Shrink horizontally
         bind -r L resize-pane -R 5  # Expand horizontally
 
+        # annoying delay for escape key fix:
+        set -sg escape-time 0
         
         # set base to 1 for windows and panes
         set -g base-index 1
