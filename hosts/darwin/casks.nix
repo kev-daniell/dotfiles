@@ -15,6 +15,7 @@ _:
   "zoom"
   "microsoft-outlook"
   "microsoft-word"
+  "adobe-acrobat-reader"
 
   # Entertainment Tools
   "spotify"
