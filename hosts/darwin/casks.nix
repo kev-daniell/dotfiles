@@ -20,6 +20,8 @@ _:
   # Entertainment Tools
   "spotify"
 
+  # 3D modeling
+  "blender"
 
   # Browsers
   "google-chrome"
