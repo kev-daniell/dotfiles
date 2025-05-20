@@ -250,6 +250,7 @@
 
         pull.rebase = true;
         rebase.autoStash = true;
+        merge.conflictstyle = "diff3";
         user.signingkey = "%GPG_KEY_ID%";
         commit.gpgSign = true;
 
