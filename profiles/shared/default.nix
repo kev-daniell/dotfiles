@@ -220,6 +220,7 @@
       settings = {
         theme = "dark_plus";
         editor.line-number = "relative";
+        editor.file-picker.hidden = false;
         keys.normal = {
           C-h = "jump_view_left";
           C-j = "jump_view_down";
