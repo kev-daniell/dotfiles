@@ -38,6 +38,7 @@
         g = "git";
         h = "hx";
         f = "fzf";
+        lg = "lazygit";
       };
     };
 

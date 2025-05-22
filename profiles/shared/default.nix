@@ -47,6 +47,7 @@
       nats-server
       foundry
       helix
+      lazygit
     ];
   };
 
