@@ -38,11 +38,7 @@
       nodePackages.typescript-language-server
 
       # Rust
-      rustc
-      cargo
-      rustfmt
-      clippy
-      rust-analyzer
+      rustup
 
       python3
       go
