@@ -216,8 +216,11 @@
 
       settings = {
         theme = "dark_plus";
-        editor.line-number = "relative";
-        editor.file-picker.hidden = false;
+        editor = {
+          line-number = "relative";
+          file-picker.hidden = false;
+          bufferline = "multiple";
+        };
         keys.normal = {
           C-h = "jump_view_left";
           C-j = "jump_view_down";
