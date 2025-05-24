@@ -222,6 +222,8 @@
           bufferline = "multiple";
         };
         keys.normal = {
+          # highlight lines upward
+          X = ["extend_line_up" "extend_to_line_bounds"];
           C-h = "jump_view_left";
           C-j = "jump_view_down";
           C-k = "jump_view_up";
