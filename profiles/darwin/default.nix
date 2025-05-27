@@ -43,7 +43,7 @@
         h = "hx";
         f = "fzf";
         lg = "lazygit";
-        ai = "aider --model gemini/gemini-2.0-flash";
+        ai = "aider --model gemini/gemini-2.5-flash-preview-05-20";
       };
     };
 
