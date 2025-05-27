@@ -14,12 +14,16 @@ export GIT_EMAIL
 read -rp "Enter your GPG key ID: " GPG_KEY_ID
 export GPG_KEY_ID
 
+read -rp "Enter your Gemini API key: " GEMINI_KEY
+export GEMINI_KEY
+
 echo -e "\n✅ Environment variables set:"
 echo "HOSTNAME=$HOSTNAME"
 echo "USERNAME=$USERNAME"
 echo "GIT_NAME=$GIT_NAME"
 echo "GIT_EMAIL=$GIT_EMAIL"
 echo "GPG_KEY_ID=$GPG_KEY_ID"
+echo "GEMINI_KEY=$GEMINI_KEY"
 
 # Function to recursively replace %VAR% in files under current directory
 echo -e "\n🔧 Replacing variables in files under $(pwd)..."
@@ -32,6 +36,7 @@ for file in $(find . -type f); do
     sed -i '' "s|%GIT_NAME%|$GIT_NAME|g" "$file"
     sed -i '' "s|%GIT_EMAIL%|$GIT_EMAIL|g" "$file"
     sed -i '' "s|%GPG_KEY_ID%|$GPG_KEY_ID|g" "$file"
+    sed -i '' "s|%GEMINI_KEY%|$GEMINI_KEY|g" "$file"
   fi
 done
 

@@ -5,6 +5,10 @@
 
 
 {
+  imports = [
+    ../../programs/default.nix
+  ];
+
   home = {
     sessionVariables = {
       DIRENV_LOG_FORMAT = "";
@@ -40,13 +44,11 @@
       # Rust
       rustup
 
-      python3
       go
       ltex-ls
       pyright
       nats-server
       foundry
-      helix
       lazygit
     ];
   };
