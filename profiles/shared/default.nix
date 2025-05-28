@@ -54,6 +54,15 @@
   };
 
   programs = {
+    # Enable aider
+    aider = {
+      enable = true;
+      editor = "hx";
+      model = "gemini/gemini-2.5-flash-preview-05-20";
+      autoCommit= false;
+      geminiApiKey = "%GEMINI_KEY%";
+    };
+
     direnv = {
       enable = true;
       nix-direnv.enable = true;

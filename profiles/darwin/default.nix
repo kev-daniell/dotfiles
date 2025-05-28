@@ -14,10 +14,6 @@
           [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
           tmux source-file ~/.config/tmux/tmux.conf
-
-          export GEMINI_API_KEY=%GEMINI_KEY%
-          export AIDER_AUTO_COMMITS=False
-          export AIDER_EDITOR="hx"
         '';
       };
       ".p10k.zsh" = {
@@ -43,7 +39,7 @@
         h = "hx";
         f = "fzf";
         lg = "lazygit";
-        ai = "aider --model gemini/gemini-2.5-flash-preview-05-20";
+        ai = "aider";
       };
     };
 
