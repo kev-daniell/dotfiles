@@ -1,21 +1,10 @@
 #!/bin/bash
 
+source .env
 # Prompt and export environment variables
 export HOSTNAME=$(hostname -s)
 
 export USERNAME=$(whoami)
-
-read -rp "Enter your name for git: " GIT_NAME
-export GIT_NAME
-
-read -rp "Enter your email for git: " GIT_EMAIL
-export GIT_EMAIL
-
-read -rp "Enter your GPG key ID: " GPG_KEY_ID
-export GPG_KEY_ID
-
-read -rp "Enter your Gemini API key: " GEMINI_KEY
-export GEMINI_KEY
 
 echo -e "\n✅ Environment variables set:"
 echo "HOSTNAME=$HOSTNAME"
