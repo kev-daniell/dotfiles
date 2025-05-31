@@ -30,8 +30,14 @@
    git clone https://github.com/kev-daniell/dotfiles.git
    cd dotfiles
    ```
+2. Define environment variables
 
-2. Build and activate the Nix environment:
+   ```sh
+   cp .env.example .env
+   ```
+   Now you can go into `.env` and you can update the variables with an editor of your choice.
+
+3. Build and activate the Nix environment:
 
    ```sh
    make switch
