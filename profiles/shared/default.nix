@@ -103,6 +103,9 @@
         setw -g pane-base-index 1
 
         setw -g mode-keys vi
+
+        # tmux resurrect
+        set -g @plugin 'tmux-plugins/tmux-resurrect'
         
         # CATPPUCCIN CONFIG:
         set -g @tpm_plugins '
