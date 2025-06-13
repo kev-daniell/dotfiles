@@ -6,6 +6,7 @@ _:
   "postman"
   "iterm2"
   "cursor"
+  "docker"
 
   # Communication Tools
   "discord"
