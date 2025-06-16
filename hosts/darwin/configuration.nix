@@ -51,7 +51,6 @@
         { app = "/Applications/Microsoft Outlook.app/"; }
 
         { app = "/Applications/Visual Studio Code.app/"; }
-        { app = "/Applications/Cursor.app/"; }
         { app = "/Applications/Postman.app/"; }
         { app = "/Applications/iTerm.app/"; }
         { app = "/Applications/Discord.app/"; }

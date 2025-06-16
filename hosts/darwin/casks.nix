@@ -5,7 +5,6 @@ _:
   "visual-studio-code"
   "postman"
   "iterm2"
-  "cursor"
   "docker"
 
   # Communication Tools
