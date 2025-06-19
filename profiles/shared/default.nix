@@ -1,8 +1,7 @@
 {
   pkgs,
   ...
-}: 
-
+}:
 
 {
   imports = [
@@ -31,7 +30,7 @@
       tmux
       fzf
 
-      # Node 
+      # Node
       nodejs
       nodePackages.npm # globally install npm
       pnpm
@@ -51,6 +50,8 @@
       foundry
       lazygit
       (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
+      terraform
+      kubernetes-helm
     ];
   };
 
