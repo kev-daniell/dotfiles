@@ -3,6 +3,9 @@
   ...
 }: {
 
+  # Allow unfree packages globally (for terraform)
+  nixpkgs.config.allowUnfree = true;
+
   homebrew = {
       enable = true; 
       casks = pkgs.callPackage ./casks.nix {};
