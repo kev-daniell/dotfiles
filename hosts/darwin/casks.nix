@@ -6,6 +6,7 @@ _:
   "postman"
   "iterm2"
   "docker"
+  "beekeeper-studio"
 
   # Communication Tools
   "discord"
@@ -19,9 +20,6 @@ _:
 
   # Entertainment Tools
   "spotify"
-
-  # 3D modeling
-  "blender"
 
   # Browsers
   "google-chrome"
