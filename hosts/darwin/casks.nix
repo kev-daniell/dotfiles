@@ -7,6 +7,7 @@ _:
   "iterm2"
   "docker"
   "beekeeper-studio"
+  "rectangle"
 
   # Communication Tools
   "discord"
