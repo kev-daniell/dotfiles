@@ -6,11 +6,6 @@
 }:
 with lib; let
   cfg = config.programs.aider;
-
-  aider-python = pkgs.python312.withPackages (ps: with ps; [
-    aider-chat
-    google-generativeai
-  ]);
 in {
   options.programs.aider = {
     enable = mkEnableOption "Aider AI coding assistant";
@@ -54,7 +49,7 @@ in {
     '';
 
     home.packages = [
-      aider-python
+      pkgs.aider-chat
     ];
   };
 }

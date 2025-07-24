@@ -31,7 +31,6 @@
       fzf
 
       # Node
-      nodejs
       nodePackages.npm # globally install npm
       pnpm
       yarn
