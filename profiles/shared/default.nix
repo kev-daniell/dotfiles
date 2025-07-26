@@ -246,8 +246,7 @@
           space = {
             l = ":reload-all";
             u = ":reset-diff-change";
-            o = ":reflow";
-            T = ":tree-sitter-subtree";
+            B = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}";
           };
         };
       };
