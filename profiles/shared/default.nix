@@ -28,7 +28,6 @@
       helix
       gnupg
       tmux
-      fzf
 
       # Node
       nodePackages.npm # globally install npm
