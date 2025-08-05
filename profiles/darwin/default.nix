@@ -1,7 +1,7 @@
 {
   pkgs,
   ...
-}: 
+}:
 
 {
   home.file.".p10k.zsh" = {
@@ -10,7 +10,7 @@
 
   programs = {
     zsh = {
-      enable = true; 
+      enable = true;
       plugins = [
         {
           name = "powerlevel10k";
