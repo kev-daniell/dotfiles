@@ -105,12 +105,10 @@
 
         setw -g mode-keys vi
 
-        # tmux resurrect
-        set -g @plugin 'tmux-plugins/tmux-resurrect'
-        
-        # CATPPUCCIN CONFIG:
+        # TMUX PLUGINS:
         set -g @tpm_plugins '
             tmux-plugins/tpm \
+            tmux-plugins/tmux-resurrect \
             tmux-plugins/tmux-online-status \
             tmux-plugins/tmux-battery \
         '
