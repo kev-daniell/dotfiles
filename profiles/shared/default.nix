@@ -233,6 +233,7 @@
           line-number = "relative";
           file-picker.hidden = false;
           bufferline = "multiple";
+          cursorline = true;
         };
         keys.normal = {
           # highlight lines upward
