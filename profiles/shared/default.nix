@@ -245,6 +245,8 @@
           space = {
             l = ":reload-all";
             u = ":reset-diff-change";
+            o = ":reflow";
+            t = ":toggle-option lsp.display-inlay-hints";
             B = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}";
           };
         };
