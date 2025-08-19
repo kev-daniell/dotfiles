@@ -242,6 +242,7 @@
           C-j = "jump_view_down";
           C-k = "jump_view_up";
           C-l = "jump_view_right";
+
           space = {
             l = ":reload-all";
             u = ":reset-diff-change";
