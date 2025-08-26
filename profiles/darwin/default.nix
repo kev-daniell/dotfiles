@@ -28,6 +28,7 @@
         h = "hx";
         lg = "lazygit";
         ai = "aider";
+        kc = "kubectl";
       };
     };
 
