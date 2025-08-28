@@ -45,6 +45,7 @@
       ltex-ls
       pyright
       nats-server
+      natscli
       foundry
       lazygit
       (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
