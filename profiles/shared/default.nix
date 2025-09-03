@@ -44,7 +44,10 @@
       go
       ltex-ls
       pyright
-      python3Packages.jupyterlab
+      (python3.withPackages (ps: with ps; [
+        jupyterlab
+        ipykernel
+      ]))
       nats-server
       natscli
       foundry
