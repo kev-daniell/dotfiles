@@ -44,6 +44,7 @@
       go
       ltex-ls
       pyright
+      python3Packages.jupyterlab
       nats-server
       natscli
       foundry
