@@ -8,6 +8,7 @@ _:
   "docker"
   "beekeeper-studio"
   "rectangle"
+  "rstudio"
 
   # Communication Tools
   "discord"

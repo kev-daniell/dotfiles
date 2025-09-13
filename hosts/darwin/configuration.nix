@@ -61,6 +61,7 @@
           { app = "/Applications/iTerm.app/"; }
           { app = "/Applications/Discord.app/"; }
           { app = "/Applications/Slack.app/"; }
+          { app = "/Applications/RStudio.app"}
           { app = "/Applications/Spotify.app/"; }
 
           { app = "/System/Applications/Maps.app/"; }
