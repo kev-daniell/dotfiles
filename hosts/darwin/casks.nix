@@ -9,6 +9,7 @@ _:
   "beekeeper-studio"
   "rectangle"
   "rstudio"
+  "r"
 
   # Communication Tools
   "discord"
