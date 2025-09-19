@@ -20,6 +20,7 @@ _:
   "microsoft-outlook"
   "microsoft-word"
   "adobe-acrobat-reader"
+  "onedrive"
 
   # Entertainment Tools
   "spotify"
