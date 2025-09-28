@@ -28,6 +28,7 @@
       helix
       gnupg
       tmux
+      gemini-cli
 
       # Node
       nodePackages.npm # globally install npm
