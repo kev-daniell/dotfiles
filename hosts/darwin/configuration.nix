@@ -48,7 +48,6 @@
 
         # Fully declarative dock
         persistent-apps = [
-          { app = "/System/Applications/Launchpad.app/"; }
           { app = "/Applications/Google Chrome.app/"; }
           { app = "/Applications/Firefox.app/"; }
           { app = "/Applications/Safari.app/"; }
@@ -59,6 +58,7 @@
           { app = "/Applications/Visual Studio Code.app/"; }
           { app = "/Applications/Postman.app/"; }
           { app = "/Applications/iTerm.app/"; }
+          { app = "/Applications/Docker.app/"; }
           { app = "/Applications/Discord.app/"; }
           { app = "/Applications/Slack.app/"; }
           { app = "/Applications/RStudio.app"; }
