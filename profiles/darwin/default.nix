@@ -18,7 +18,7 @@
           file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
         }
       ];
-      initExtra = ''
+      initContent = ''
         eval "$(/opt/homebrew/bin/brew shellenv)"
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
         tmux source-file ~/.config/tmux/tmux.conf

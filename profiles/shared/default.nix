@@ -57,6 +57,7 @@
       terraform
       kubernetes-helm
       postgresql
+      solana-cli
     ];
   };
 
@@ -262,10 +263,14 @@
 
     git = {
       enable = true;
-      userName = "%GIT_NAME%";
-      userEmail = "%GIT_EMAIL%";
 
-      extraConfig = {
+      settings = {
+        user = {
+          name = "%GIT_NAME%";
+          email = "%GIT_EMAIL%";
+          signingkey = "%GPG_KEY_ID%";
+        };
+
         init.defaultBranch = "main";
         
         core = {
@@ -276,7 +281,6 @@
         pull.rebase = true;
         rebase.autoStash = true;
         merge.conflictstyle = "diff3";
-        user.signingkey = "%GPG_KEY_ID%";
         commit.gpgSign = true;
 
         alias = {
