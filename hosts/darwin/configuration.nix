@@ -49,7 +49,6 @@
         # Fully declarative dock
         persistent-apps = [
           { app = "/Applications/Google Chrome.app/"; }
-          { app = "/Applications/Firefox.app/"; }
           { app = "/Applications/Safari.app/"; }
           { app = "/System/Applications/Messages.app/"; }
           { app = "/Applications/Telegram.app/"; }

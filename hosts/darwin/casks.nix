@@ -28,7 +28,6 @@ _:
 
   # Browsers
   "google-chrome"
-  "firefox"
 
   # Sec. Tools
   "1password"
