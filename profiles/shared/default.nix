@@ -46,8 +46,8 @@
       ltex-ls
       pyright
       (python3.withPackages (ps: with ps; [
-        jupyterlab
-        ipykernel
+        # don't need any other pkgs, just use virtual envs
+        pip
       ]))
       nats-server
       natscli
