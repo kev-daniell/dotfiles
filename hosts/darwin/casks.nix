@@ -10,6 +10,7 @@ _:
   "rectangle"
   "rstudio"
   "r"
+  "wireshark"
 
   # Communication Tools
   "discord"
