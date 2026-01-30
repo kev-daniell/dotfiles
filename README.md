@@ -14,12 +14,6 @@
      | sh -s -- install --determinate
    ```
 
-2. Install `nix-darwin` by running:
-
-   ```sh
-   nix profile install nix-darwin
-   ```
-
 [determinate systems installer]: https://github.com/DeterminateSystems/nix-installer
 
 ## Getting Started

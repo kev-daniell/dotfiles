@@ -2,34 +2,34 @@ _:
 
 [
   # Development Tools
-  "visual-studio-code"
-  "postman"
+  # "visual-studio-code"
+  # "postman"
   "iterm2"
-  "docker"
-  "beekeeper-studio"
-  "rectangle"
-  "rstudio"
-  "r"
+  # "docker"
+  # "beekeeper-studio"
+  # "rectangle"
+  # "rstudio"
+  # "r"
 
   # Communication Tools
-  "discord"
-  "slack"
-  "telegram"
-  "notion"
-  "zoom"
-  "microsoft-outlook"
-  "microsoft-word"
-  "adobe-acrobat-reader"
-  "onedrive"
-  "linear-linear"
+  # "discord"
+  # "slack"
+  # "telegram"
+  # "notion"
+  # "zoom"
+  # "microsoft-outlook"
+  # "microsoft-word"
+  # "adobe-acrobat-reader"
+  # "onedrive"
+  # "linear-linear"
 
   # Entertainment Tools
-  "spotify"
+  # "spotify"
 
   # Browsers
-  "google-chrome"
+  # "google-chrome"
 
   # Sec. Tools
-  "1password"
-  "tailscale"
+  # "1password"
+  # "tailscale"
 ]

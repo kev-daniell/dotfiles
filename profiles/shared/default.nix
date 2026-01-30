@@ -24,47 +24,47 @@
     stateVersion = "22.05";
 
     packages = with pkgs; [
-      vim
+      # vim
       helix
       gnupg
       tmux
       gemini-cli
 
       # Node
-      nodePackages.npm # globally install npm
-      pnpm
-      yarn
-      bun
-      nodePackages.prettier
-      nodePackages.nodemon
-      nodePackages.typescript-language-server
+      # nodePackages.npm # globally install npm
+      # pnpm
+      # yarn
+      # bun
+      # nodePackages.prettier
+      # nodePackages.nodemon
+      # nodePackages.typescript-language-server
 
       # Rust
-      rustup
+      # rustup
 
-      go
-      ltex-ls
-      pyright
-      (python3.withPackages (ps: with ps; [
-        # don't need any other pkgs, just use virtual envs
-        pip
-      ]))
-      nats-server
-      natscli
-      foundry
+      # go
+      # ltex-ls
+      # pyright
+      # (python3.withPackages (ps: with ps; [
+      #   # don't need any other pkgs, just use virtual envs
+      #   pip
+      # ]))
+      # nats-server
+      # natscli
+      # foundry
       lazygit
-      (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
-      terraform
-      kubernetes-helm
-      postgresql
-      solana-cli
+      # (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
+      # terraform
+      # kubernetes-helm
+      # postgresql
+      # solana-cli
     ];
   };
 
   programs = {
     # Enable aider
     aider = {
-      enable = true;
+      enable = false;
       editor = "hx";
       model = "gemini/gemini-2.5-flash-preview-05-20";
       autoCommit= false;

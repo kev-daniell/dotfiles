@@ -24,9 +24,9 @@
     nixpkgs,
     ...
   }: let
-    hostname = "%HOSTNAME%";
+    hostname = "Kevins-MacBook-Air";
     user = rec {
-      username = "%USERNAME%";
+      username = "kevindaniel";
       homeDirectory = "/Users/${username}";
     };
     forEachSystem = nixpkgs.lib.genAttrs [
