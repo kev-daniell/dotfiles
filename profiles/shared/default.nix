@@ -41,6 +41,7 @@
 
       # Rust
       rustup
+      bacon
 
       go
       ltex-ls
