@@ -12,6 +12,9 @@ _:
   "r"
   "wireshark"
 
+  # i3-like window manager
+  "nikitabobko/tap/aerospace"
+
   # Communication Tools
   "discord"
   "slack"
