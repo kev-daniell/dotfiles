@@ -6,7 +6,8 @@ let
     "config-version" = 2;
     "after-startup-command" = [];
     "start-at-login" = false;
-    "enable-normalization-flatten-containers" = true;
+    # false to enable i3 style splitting
+    "enable-normalization-flatten-containers" = false;
     "enable-normalization-opposite-orientation-for-nested-containers" = true;
     "accordion-padding" = 30;
     "default-root-container-layout" = "tiles";
@@ -78,6 +79,10 @@ let
           "alt-shift-t" = "move-node-to-workspace T";
           # fullscreen
           "alt-shift-f" = "fullscreen";
+
+          # i3 style splitting
+          "alt-ctrl--h" = "split horizontal";
+          "alt-ctrl-v" = "split vertical";
           
           "alt-z" = "workspace Z";
           "alt-tab" = "workspace-back-and-forth";
