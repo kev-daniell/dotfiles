@@ -13,6 +13,25 @@ let
     "default-root-container-layout" = "tiles";
     "default-root-container-orientation" = "auto";
     "on-focused-monitor-changed" = [ "move-mouse monitor-lazy-center" ];
+    "on-focus-changed" = "move-mouse window-lazy-center";
+    "on-window-detected" = [
+      {
+        "if".app-id = "com.googlecode.iterm2";
+        run = "move-node-to-workspace T";
+      }
+      {
+        "if".app-id = "com.apple.Notes";
+        run = "move-node-to-workspace N";
+      }
+      {
+        "if".app-id = "com.apple.ActivityMonitor";
+        run = "move-node-to-workspace N";
+      }
+      {
+        "if".app-id = "com.spotify.client";
+        run = "move-node-to-workspace M";
+      }
+    ];
     "automatically-unhide-macos-hidden-apps" = false;
     "persistent-workspaces" = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" "B" "M" "N" "R" "T"];
     "on-mode-changed" = [];
