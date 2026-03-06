@@ -20,6 +20,10 @@ let
         run = "move-node-to-workspace T";
       }
       {
+        "if".app-id = "com.microsoft.VSCode";
+        run = "move-node-to-workspace T";
+      }
+      {
         "if".app-id = "com.apple.Notes";
         run = "move-node-to-workspace N";
       }
@@ -33,7 +37,7 @@ let
       }
     ];
     "automatically-unhide-macos-hidden-apps" = false;
-    "persistent-workspaces" = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" "B" "M" "N" "R" "T"];
+    "persistent-workspaces" = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" "C" "M" "N" "R" "T"];
     "on-mode-changed" = [];
 
     "key-mapping" = {
@@ -77,7 +81,7 @@ let
           "alt-7" = "workspace 7";
           "alt-8" = "workspace 8";
           "alt-9" = "workspace 9";
-          "alt-b" = "workspace B";
+          "alt-c" = "workspace C";
           "alt-m" = "workspace M";
           "alt-n" = "workspace N";
           "alt-r" = "workspace R";
@@ -91,7 +95,7 @@ let
           "alt-shift-7" = "move-node-to-workspace 7";
           "alt-shift-8" = "move-node-to-workspace 8";
           "alt-shift-9" = "move-node-to-workspace 9";
-          "alt-shift-b" = "move-node-to-workspace B";
+          "alt-shift-c" = "move-node-to-workspace C";
           "alt-shift-m" = "move-node-to-workspace M";
           "alt-shift-n" = "move-node-to-workspace N";
           "alt-shift-r" = "move-node-to-workspace R";
@@ -100,7 +104,7 @@ let
           "alt-shift-f" = "fullscreen";
 
           # i3 style splitting
-          "alt-ctrl--h" = "split horizontal";
+          "alt-ctrl-h" = "split horizontal";
           "alt-ctrl-v" = "split vertical";
           
           "alt-z" = "workspace Z";
