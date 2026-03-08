@@ -5,6 +5,7 @@ _:
   "visual-studio-code"
   "postman"
   "iterm2"
+  "ghostty"
   "docker"
   "beekeeper-studio"
   "rectangle"
