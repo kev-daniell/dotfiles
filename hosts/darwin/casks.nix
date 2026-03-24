@@ -12,6 +12,7 @@ _:
   "rstudio"
   "r"
   "wireshark"
+  "codex-app"
 
   # i3-like window manager
   "nikitabobko/tap/aerospace"
