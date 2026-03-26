@@ -6,12 +6,12 @@ _:
   "postman"
   "iterm2"
   "ghostty"
-  "docker"
+  "docker-desktop"
   "beekeeper-studio"
   "rectangle"
   "rstudio"
-  "r"
-  "wireshark"
+  "r-app"
+  "wireshark-app"
   "codex-app"
 
   # i3-like window manager
@@ -37,5 +37,5 @@ _:
 
   # Sec. Tools
   "1password"
-  "tailscale"
+  "tailscale-app"
 ]
