@@ -24,6 +24,10 @@ let
         run = "move-node-to-workspace T";
       }
       {
+        "if".app-id = "com.mitchellh.ghostty";
+        run = "move-node-to-workspace T";
+      }
+      {
         "if".app-id = "com.apple.Notes";
         run = "move-node-to-workspace N";
       }
