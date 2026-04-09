@@ -4,7 +4,6 @@ _:
   # Development Tools
   "visual-studio-code"
   "postman"
-  "iterm2"
   "ghostty"
   "docker-desktop"
   "beekeeper-studio"
