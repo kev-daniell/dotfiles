@@ -7,7 +7,6 @@ _:
   "ghostty"
   "docker-desktop"
   "beekeeper-studio"
-  "rectangle"
   "rstudio"
   "r-app"
   "wireshark-app"

@@ -56,7 +56,7 @@
 
           { app = "/Applications/Visual Studio Code.app/"; }
           { app = "/Applications/Postman.app/"; }
-          { app = "/Applications/iTerm.app/"; }
+          { app = "/Applications/Ghostty.app/"; }
           { app = "/Applications/Docker.app/"; }
           { app = "/Applications/Discord.app/"; }
           { app = "/Applications/Slack.app/"; }

@@ -16,10 +16,6 @@ let
     "on-focus-changed" = "move-mouse window-lazy-center";
     "on-window-detected" = [
       {
-        "if".app-id = "com.googlecode.iterm2";
-        run = "move-node-to-workspace T";
-      }
-      {
         "if".app-id = "com.microsoft.VSCode";
         run = "move-node-to-workspace T";
       }
@@ -38,6 +34,10 @@ let
       {
         "if".app-id = "com.spotify.client";
         run = "move-node-to-workspace M";
+      }
+      {
+        "if".app-id = "com.google.Chrome";
+        run = "move-node-to-workspace C";
       }
     ];
     "automatically-unhide-macos-hidden-apps" = false;
