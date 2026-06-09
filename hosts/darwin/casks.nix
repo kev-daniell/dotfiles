@@ -19,7 +19,6 @@ _:
   "discord"
   "slack"
   "telegram"
-  "notion"
   "zoom"
   "microsoft-outlook"
   "microsoft-word"
