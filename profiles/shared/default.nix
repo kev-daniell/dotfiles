@@ -32,6 +32,7 @@
       helix
       gnupg
       tmux
+      yazi
       gemini-cli
 
       # Node
@@ -67,6 +68,19 @@
   };
 
   programs = {
+
+    yazi = {
+      enable = true;
+
+      settings = {
+        opener = {
+          edit = [
+            { run = "hx \"$@\""; block = true; desc = "Helix"; }
+          ];
+        };
+      };
+    };
+
     # Enable aider
     aider = {
       enable = true;
