@@ -24,7 +24,7 @@ _:
   "microsoft-word"
   "adobe-acrobat-reader"
   "onedrive"
-  "linear-linear"
+  "linear"
 
   # Entertainment Tools
   "spotify"
