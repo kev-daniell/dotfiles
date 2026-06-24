@@ -49,7 +49,7 @@
       bacon
 
       go
-      ltex-ls
+      ltex-ls # markdown lsp
       pyright
       (python3.withPackages (ps: with ps; [
         # don't need any other pkgs, just use virtual envs
@@ -57,13 +57,11 @@
       ]))
       nats-server
       natscli
-      foundry
       lazygit
       (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
       terraform
       kubernetes-helm
       postgresql
-      solana-cli
     ];
   };
 
