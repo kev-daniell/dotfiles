@@ -43,6 +43,7 @@
       nodePackages.prettier
       nodePackages.nodemon
       nodePackages.typescript-language-server
+      vscode-langservers-extracted # lsp for json
 
       # Rust
       rustup
