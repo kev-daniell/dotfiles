@@ -57,6 +57,7 @@
             name = user.username;
           };
           home-manager = {
+            backupFileExtension = "backup";
             extraSpecialArgs = { inherit user; };
             useGlobalPkgs = true;
             useUserPackages = true;

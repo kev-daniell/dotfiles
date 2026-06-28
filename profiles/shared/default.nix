@@ -36,13 +36,13 @@
       gemini-cli
 
       # Node
-      nodePackages.npm # globally install npm
+      nodejs # globally install npm
       pnpm
       yarn
       bun
-      nodePackages.prettier
-      nodePackages.nodemon
-      nodePackages.typescript-language-server
+      prettier
+      nodemon
+      typescript-language-server
       vscode-langservers-extracted # lsp for json
 
       # Rust
@@ -70,6 +70,7 @@
 
     yazi = {
       enable = true;
+      shellWrapperName = "yy";
 
       settings = {
         opener = {
