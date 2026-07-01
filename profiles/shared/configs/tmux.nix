@@ -28,6 +28,10 @@
       bind -r H resize-pane -L 5  # Shrink horizontally
       bind -r L resize-pane -R 5  # Expand horizontally
 
+      # force adding pane horizontally or vertically
+      bind v split-window -fv
+      bind b split-window -fh
+
       # annoying delay for escape key fix:
       set -sg escape-time 0
       
