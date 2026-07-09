@@ -33,7 +33,7 @@
       gnupg
       tmux
       yazi
-      gemini-cli
+      antigravity-cli
 
       # Node
       nodejs # globally install npm
