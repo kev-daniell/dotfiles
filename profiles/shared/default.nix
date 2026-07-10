@@ -49,6 +49,7 @@
       rustup
       bacon
 
+      gh # github cli
       go
       ltex-ls # markdown lsp
       pyright
@@ -80,6 +81,14 @@
         };
       };
     };
+
+    gh = {
+      enable = true;
+      settings = {
+        editor = "hx";
+      };
+    };
+
 
     # Enable aider
     aider = {
