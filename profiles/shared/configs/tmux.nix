@@ -17,11 +17,11 @@
 
       setw -g mouse on
 
-      # vim motions
-      bind h select-pane -L
-      bind j select-pane -D
-      bind k select-pane -U
-      bind l select-pane -R
+      # vim motions: witch tmux panes using Control + hjkl (No prefix)
+      bind -n C-h select-pane -L
+      bind -n C-j select-pane -D
+      bind -n C-k select-pane -U
+      bind -n C-l select-pane -R
 
       bind -r J resize-pane -D 5  # Shrink vertically
       bind -r K resize-pane -U 5  # Expand vertically
