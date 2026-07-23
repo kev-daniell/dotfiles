@@ -6,10 +6,6 @@ _:
   "postman"
   "ghostty"
   "docker-desktop"
-  "beekeeper-studio"
-  "rstudio"
-  "r-app"
-  "wireshark-app"
   "codex-app"
 
   # i3-like window manager
@@ -24,7 +20,6 @@ _:
   "microsoft-word"
   "adobe-acrobat-reader"
   "onedrive"
-  "linear"
 
   # Entertainment Tools
   "spotify"
