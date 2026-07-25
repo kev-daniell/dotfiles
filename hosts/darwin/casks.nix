@@ -26,8 +26,4 @@ _:
 
   # Browsers
   "google-chrome"
-
-  # Sec. Tools
-  "1password"
-  "tailscale-app"
 ]
