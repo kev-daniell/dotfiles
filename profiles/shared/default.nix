@@ -103,5 +103,14 @@
       enable = true;
       nix-direnv.enable = true;
     };
+
+    ghostty = {
+      enable = true;
+      package = null; # package managed by brew
+      settings = {
+        background-opacity = 0.3;
+        background-blur-radius = 20;
+      };
+    };
   };
 }
