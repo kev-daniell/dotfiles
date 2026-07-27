@@ -45,8 +45,15 @@
       }
     ];
 
+    themes = {
+      dark_plus_transparent = {
+        inherits = "dark_plus";
+        "ui.background" = {};
+      };
+    };
+
     settings = {
-      theme = "dark_plus";
+      theme = "dark_plus_transparent";
       editor = {
         line-number = "relative";
         file-picker.hidden = false;
