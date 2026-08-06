@@ -20,6 +20,11 @@
    nix profile install nix-darwin
    ```
 
+3. Other pre-requisites
+
+- Install `brew`
+- Install `git`
+
 [determinate systems installer]: https://github.com/DeterminateSystems/nix-installer
 
 ## Getting Started
