@@ -108,7 +108,7 @@
       enable = true;
       package = null; # package managed by brew
       settings = {
-        background-opacity = 0.3;
+        background-opacity = 0.7;
         background-blur-radius = 20;
       };
     };
