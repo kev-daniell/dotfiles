@@ -28,6 +28,10 @@
       bind -r H resize-pane -L 5  # Shrink horizontally
       bind -r L resize-pane -R 5  # Expand horizontally
 
+      # new pane is in the same working dir as parent
+      bind '"' split-window -v -c "#{pane_current_path}"
+      bind % split-window -h -c "#{pane_current_path}"
+
       # force adding pane horizontally or vertically
       bind v split-window -fv
       bind b split-window -fh
