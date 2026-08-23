@@ -33,8 +33,8 @@
       bind % split-window -h -c "#{pane_current_path}"
 
       # force adding pane horizontally or vertically
-      bind v split-window -fv
-      bind b split-window -fh
+      bind v split-window -fv -c "#{pane_current_path}"
+      bind b split-window -fh -c "#{pane_current_path}"
 
       # annoying delay for escape key fix:
       set -sg escape-time 0
