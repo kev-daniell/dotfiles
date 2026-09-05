@@ -45,13 +45,13 @@
 
       setw -g mode-keys vi
 
-      # TMUX PLUGINS:
-      set -g @tpm_plugins '
-          tmux-plugins/tpm \
-          tmux-plugins/tmux-resurrect \
-          tmux-plugins/tmux-online-status \
-          tmux-plugins/tmux-battery \
-      '
+      # TMUX PLUGINS (TPM-managed; the nix-managed ones live in `plugins` above).
+      # `@tpm_plugins` is deprecated in TPM, `@plugin` is the current syntax.
+      set -g @plugin 'tmux-plugins/tpm'
+      set -g @plugin 'tmux-plugins/tmux-resurrect'
+      set -g @plugin 'tmux-plugins/tmux-online-status'
+      set -g @plugin 'tmux-plugins/tmux-battery'
+      set -g @plugin 'accessd/tmux-agent-indicator'
 
       
       # Configure Catppuccin
@@ -65,6 +65,53 @@
       set -g @online_icon "ok"
       set -g @offline_icon "nok"
       
+      # Configure Agent Indicator
+      # Only two visual channels are on: the window title in the centred window
+      # list, and the status-left icon. Pane borders and pane backgrounds are
+      # left alone so the muted catppuccin border styling below survives.
+      set -g @agent-indicator-indicator-enabled "on"
+      set -g @agent-indicator-border-enabled "off"
+      set -g @agent-indicator-background-enabled "off"
+
+      # Nerd Font icons - the upstream defaults are emoji, which are double-width
+      # and break alignment against the glyphs used elsewhere in the status bar.
+      set -g @agent-indicator-icons "claude=󰚩,codex=󰧑,opencode=,default=󰚩"
+
+      # running: icon only, no window styling (empty bg+fg means "skip")
+      set -g @agent-indicator-running-bg ""
+      set -g @agent-indicator-running-border ""
+      set -g @agent-indicator-running-window-title-bg ""
+      set -g @agent-indicator-running-window-title-fg ""
+
+      # needs-input: yellow, the same attention colour as the zoom flag
+      set -g @agent-indicator-needs-input-bg ""
+      set -g @agent-indicator-needs-input-border ""
+      set -g @agent-indicator-needs-input-window-title-bg "#{@thm_yellow}"
+      set -g @agent-indicator-needs-input-window-title-fg "#{@thm_bg}"
+
+      # done: green. Upstream defaults to red, which collides with
+      # window-status-activity-style and window-status-bell-style below.
+      set -g @agent-indicator-done-bg ""
+      set -g @agent-indicator-done-border ""
+      set -g @agent-indicator-done-window-title-bg "#{@thm_green}"
+      set -g @agent-indicator-done-window-title-fg "#{@thm_bg}"
+
+      # hold the colour until the pane is actually focused, not when the hook fires
+      set -g @agent-indicator-reset-on-focus "on"
+
+      # the knight-rider animation hardcodes colour196/160/52 - off-palette
+      set -g @agent-indicator-animation-enabled "off"
+
+      # #{agent_limits} needs install.sh to wrap Claude's status-line command, and
+      # #{agent_session_dots} needs bash 4+ (macOS ships bash 3.2). Both left out.
+      set -g @agent-indicator-limits-enabled "off"
+
+      # toasts off: tmux display-message renders *in* the status line, and with
+      # status-position top that overlays the window tabs. The green/yellow window
+      # title is the signal instead - same place you're already looking.
+      set -g @agent-indicator-notification-enabled "off"
+
+      
       # status left look and feel
       set -g status-left-length 100
       set -g status-left ""
@@ -75,6 +122,9 @@
       set -ga status-left "#[bg=default,fg=#{@thm_blue}]  #{=/-32/...:#{s|$USER|~|:#{b:pane_current_path}}} "
       set -ga status-left "#[bg=default,fg=#{@thm_overlay_0},none]#{?window_zoomed_flag,│,}"
       set -ga status-left "#[bg=default,fg=#{@thm_yellow}]#{?window_zoomed_flag,  zoom ,}"
+      # agent icon, rendered by tmux-agent-indicator. Kept last so it collapses to
+      # nothing (no orphan separator) when no agent is running in this window.
+      set -ga status-left "#[bg=default,fg=#{@thm_teal}]#{agent_indicator}"
       
       # status right look and feel
       set -g status-right-length 100
@@ -86,6 +136,9 @@
       set -ga status-right "#[bg=default,fg=#{@thm_blue}] 󰭦 %Y-%m-%d 󰅐 %H:%M "
 
       # Configure Tmux
+      # #{agent_indicator} is backed by a #() shell call, so it only refreshes on
+      # status-interval. tmux defaults to 15s, which feels dead.
+      set -g status-interval 5
       set -g status-position top
       set -g status-style "bg=default"
       set -g status-justify "absolute-centre"
