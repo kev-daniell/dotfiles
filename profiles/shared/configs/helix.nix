@@ -73,6 +73,8 @@
           u = ":reset-diff-change";
           o = ":reflow";
           t = ":toggle-option lsp.display-inlay-hints";
+          # copy relative path of current file
+          n = ":echo %sh{echo -n '%{buffer_name}' | pbcopy && echo 'Copied %{buffer_name}'}";
           B = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}";
         };
       };
