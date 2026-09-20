@@ -79,6 +79,26 @@
         "type": "github"
       }
     },
+    "nhx": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789659856,
+        "narHash": "sha256-eq9POVoha+COUDjm2GtvgJE2xoT3qJEPoa2J6XK55Ms=",
+        "owner": "Ra77a3l3-jar",
+        "repo": "nhx",
+        "rev": "ba959e67f460d9ac4cf2194f4a5b65d78d86d7d6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Ra77a3l3-jar",
+        "repo": "nhx",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -120,6 +140,7 @@
       "inputs": {
         "git-hooks": "git-hooks",
         "home-manager": "home-manager",
+        "nhx": "nhx",
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs"
       }
