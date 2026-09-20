@@ -15,12 +15,18 @@
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Helix Steel-plugin support (home-manager module + plugin packages)
+    nhx = {
+      url = "github:Ra77a3l3-jar/nhx";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     git-hooks,
     home-manager,
     nix-darwin,
+    nhx,
     nixpkgs,
     ...
   }: let
@@ -58,7 +64,7 @@
           };
           home-manager = {
             backupFileExtension = "backup";
-            extraSpecialArgs = { inherit user; };
+            extraSpecialArgs = { inherit nhx user; };
             useGlobalPkgs = true;
             useUserPackages = true;
             users.${user.username}.imports = [
