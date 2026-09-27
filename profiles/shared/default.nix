@@ -10,6 +10,7 @@
     ./configs/tmux.nix
     ./configs/aerospace.nix
     ./configs/helix.nix
+    ./configs/helix_steel.nix
   ];
 
   home = {
