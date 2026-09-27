@@ -21,6 +21,12 @@
       merge.conflictstyle = "diff3";
       commit.gpgSign = true;
 
+      url = {
+        "ssh://git@github.com/" = {
+          insteadOf = "https://github.com/";
+        };
+      };
+
       alias = {
         gone = "!f() { git fetch --all --prune; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D; }; f";
         a = "add";
